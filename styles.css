@@ -316,4 +316,72 @@ h2 {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
+.section-5 {
+    padding: 60px 20px;
+}
+
+.section-5-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.section-5-card {
+    aspect-ratio: 1 / 1;
+
+    padding: 20px;
+
+    border: 1px solid #7b61ff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-5-card img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.section-5-card h3 {
+    margin-bottom: 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3d20d3;
+}
+
+.section-5-card p {
+    font-family: "Poppins", sans-serif;
+    font-size: 8px;
+    line-height: 1.45;
+    color: #555;
+}
+
+/
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media (max-width: 768px) {
+    .section-5-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .section-5-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-5-card {
+        aspect-ratio: auto;
+        min-height: 300px;
+    }
+}
