@@ -364,7 +364,83 @@ h2 {
     color: #555;
 }
 
-/
+.section-6 {
+    background-color: var(--Blauw);
+}
+
+.section-6-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.section-6-text h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.section-6-text p {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 504px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 36px;
+    padding: 10px;
+    margin-bottom: 22px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 137px;
+    padding: 10px;
+    resize: none;
+}
+
+
+.section-6-text button {
+    margin-top: 21px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--Roze);
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width:125px;
+    height: 45px;}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
