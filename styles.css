@@ -160,8 +160,16 @@ h2 {
     flex-direction: row;
     align-items: flex-start;
     gap: 60px;
-    padding: 80px;
+
     background-color: var(--Lichtgrijs);
+    clip-path: polygon(
+            0 0,
+            100% 5%,
+            100% 100%,
+            0 100%
+    );
+
+   padding-top: 150px;
 }
 
 .section-2-text {
@@ -318,6 +326,8 @@ h2 {
 
 .section-5 {
     padding: 60px 20px;
+    margin-top: 50px;
+
 }
 
 .section-5-container {
@@ -354,14 +364,14 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #3d20d3;
+    color: var(--Blauw);
 }
 
 .section-5-card p {
     font-family: "Poppins", sans-serif;
     font-size: 8px;
     line-height: 1.45;
-    color: #555;
+    color: var(--Grijs);
 }
 
 .section-6 {
@@ -441,7 +451,65 @@ h2 {
     align-items: center;
     font-size: 14px;
 }
+/* ---------- Bonus-opdracht:Grote achtergrond woorden ---------- */
 
+.section-1,
+.section-2,
+.section-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-1::before,
+.section-2::before,
+.section-5::before {
+    position: absolute;
+    z-index: 0;
+
+    font-size: 250px;
+    font-weight: 700;
+    line-height: 1;
+
+    pointer-events: none;
+    white-space: nowrap;
+
+
+}
+
+/* Section 1 - HELLO */
+.section-1::before {
+    content: "hello";
+    top: 20px;
+    left: -80px;
+    color: var(--Lichtgrijs);
+    transform: translateX(60%);
+}
+
+/* Section 2 - WORK */
+.section-2::before {
+    content: "work";
+    top: -50px;
+    color: white;
+    transform: translateX(10%);
+    font-size:24rem;
+}
+
+/* Section 5 - SERVICES */
+.section-5::before {
+    content: "services";
+    top: 10px;
+    left: -33%;
+    color: var(--Lichtgrijs);
+    transform: translateX(50%);
+}
+
+/* Actual content above the background words */
+.section-1 > *,
+.section-2 > *,
+.section-5 > * {
+    position: relative;
+    z-index: 1;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
 @media (max-width: 768px) {
