@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -28,7 +28,6 @@
 }
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 body {
@@ -37,17 +36,26 @@ body {
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 button {
     font-weight: 500;
 }
 /* --------------- 3.1 Reusables ----------------------- */
+:root {
+    --Paars: #5722CD;
+    --Blauw: #4845E4;
+    --Roze: #ED4385;
+    --Zwart: #0C0C0C;
+    --Lichtpaars: #F2F0FF;
+    --Lichtgrijs: #F3F6F9;
+    --Grijs: #7A7A7A;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -55,6 +63,581 @@ button {
 
 /* --------------- 4.1 Header ------------------------- */
 
-/* --------------- 4.2 Introduction ------------------- */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    width: 100%;
+    flex-direction: row;
+    list-style: none;
+    color: white;
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    margin: 20px 35px 20px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+}
+.header-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--Blauw);
+    color: white;
+    gap: 20px;
+
+    min-height: 400px;
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 95%
+    );
+}
+
+h1 {margin-top: 50px;
+    max-width: 600px;}
+
+.header-inner-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--Roze);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.header-inner-2 {
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    background-color: var(--Blauw);
+}
+/* --------------- 4.2 Introduction ------------------- */
+h2 {
+    color: var(--Blauw);
+    max-width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.section-1-text {
+    text-align: center;
+    width: 80%;
+
+    margin: 0 auto;
+}
+
+.section-1-text h2 {
+    margin-bottom: 70px;
+}
+
+.section-1-text p {
+    margin-bottom: 70px;
+}
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+
+    background-color: var(--Lichtgrijs);
+    clip-path: polygon(
+            0 0,
+            100% 5%,
+            100% 100%,
+            0 100%
+    );
+
+   padding-top: 150px;
+}
+
+.section-2-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.section-2-text h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    margin: 0 0 45px 0;
+    color:black;
+    text-align: left;
+}
+
+.section-2-text > img {
+    width: 75px;
+    margin-bottom: 65px;
+}
+
+.section-2-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 75px 0;
+}
+
+.section-2-text a {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--Paars);
+    text-decoration: none;
+}
+
+.section-2-image {
+    flex: 1;
+}
+
+.section-2-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px;
+    background-color: var(--Lichtgrijs);
+}
+
+.section-3-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.section-3-text h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    margin: 0 0 45px 0;
+    color: black;
+    text-align: left;
+}
+
+.section-3-text > img {
+    width: 75px;
+    margin-bottom: 65px;
+}
+
+.section-3-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 75px 0;
+}
+
+.section-3-text a {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--Paars);
+    text-decoration: none;
+}
+
+.section-3-image {
+    flex: 1;
+}
+
+.section-3-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.section-4 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px;
+    background-color: var(--Lichtgrijs);
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 95%
+    );
+}
+
+.section-4-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.section-4-text h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    margin: 0 0 45px 0;
+    color:black;
+    text-align: left;
+}
+
+.section-4-text > img {
+    width: 75px;
+    margin-bottom: 65px;
+}
+
+.section-4-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 75px 0;
+}
+
+.section-4-text a {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--Paars);
+    text-decoration: none;
+}
+
+.section-4-image {
+    flex: 1;
+}
+
+.section-4-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-5 {
+
+    padding: 100px 20px 60px;
+    margin-top: 50px;
+
+}
+
+.section-5-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.section-5-card {
+    aspect-ratio: 1 / 1;
+
+    padding: 20px;
+
+    border: 1px solid #7b61ff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex: 1 1 calc(33.333% - 18px);
+}
+
+.section-5-card img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.section-5-card h3 {
+    margin-bottom: 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Blauw);
+}
+
+.section-5-card p {
+    font-family: "Poppins", sans-serif;
+    font-size: 8px;
+    line-height: 1.45;
+    color: var(--Grijs);
+}
+
+.section-6 {
+    background-color: var(--Blauw);
+    padding: 100px 20px 60px;
+    margin-top: 50px;
+
+    clip-path: polygon(
+            0 0,
+            100% 5%,
+            100% 100%,
+            0 100%
+    );
+}
+
+.section-6-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.section-6-text h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.section-6-text p {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 504px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 36px;
+    padding: 10px;
+    margin-bottom: 22px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 137px;
+    padding: 10px;
+    resize: none;
+}
+
+
+.section-6-text button {
+    margin-top: 21px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--Roze);
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width:125px;
+    height: 45px;}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+/* ---------- Bonus-opdracht: Grote achtergrond woorden ---------- */
+
+.section-1,
+.section-2,
+.section-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-1::before,
+.section-2::before,
+.section-5::before {
+    position: absolute;
+    z-index: 0;
+
+    font-size: clamp(240px, 50vw, 600px);
+    font-weight: 700;
+    line-height: 1;
+
+    pointer-events: none;
+    white-space: nowrap;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* HELLO */
+.section-1::before {
+    content: "hello";
+    position: absolute;
+    z-index: 0;
+
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(150px, 25vw, 350px);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--Lichtgrijs);
+
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* WORK */
+.section-2::before {
+    content: "work";
+    position: absolute;
+    z-index: 0;
+
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(150px, 25vw, 350px);
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Section 5 - SERVICES */
+.section-5::before {
+    content: "services";
+    top: 10px;
+    color: var(--Lichtgrijs);
+}
+
+/* Actuele content boven de background woorden */
+.section-1 > *,
+.section-2 > *,
+.section-5 > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ------------------------------- Responsive -------------------------------- */
+
+@media (max-width: 768px) {
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        flex-direction: column;
+    }
+
+    .section-2-text,
+    .section-2-image,
+    .section-3-text,
+    .section-3-image,
+    .section-4-text,
+    .section-4-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .section-5-card {
+        flex: 1 1 calc(50% - 18px);
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-1-text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .section-5-card {
+        flex: 1 1 100%;
+        aspect-ratio: auto;
+        min-height: 300px;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding: 50px 20px;
+    }
+
+    .section-1-text {
+        width: 95%;
+    }
+
+    .section-2-text p,
+    .section-3-text p,
+    .section-4-text p {
+        font-size: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 504px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+.section-1::before,
+.section-2::before,
+.section-5::before {
+    font-size: clamp(80px, 15vw, 180px);
+}
