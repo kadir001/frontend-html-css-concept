@@ -134,21 +134,21 @@ h1 {margin-top: 50px;
 /* --------------- 4.2 Introduction ------------------- */
 h2 {
     color: var(--Blauw);
-    max-width: 650px;
+    max-width: 1000px;
     margin: 60px auto;
     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
     line-height: 1.5;
 }
 
 
 .section-1-text {
     text-align: center;
+    width: 80%;
+
+    margin: 0 auto;
 }
 
 .section-1-text h2 {
-
     margin-bottom: 70px;
 }
 
@@ -469,7 +469,7 @@ h2 {
     align-items: center;
     font-size: 14px;
 }
-/* ---------- Bonus-opdracht:Grote achtergrond woorden ---------- */
+/* ---------- Bonus-opdracht: Grote achtergrond woorden ---------- */
 
 .section-1,
 .section-2,
@@ -484,66 +484,160 @@ h2 {
     position: absolute;
     z-index: 0;
 
-    font-size: 250px;
+    font-size: clamp(240px, 50vw, 600px);
     font-weight: 700;
     line-height: 1;
 
     pointer-events: none;
     white-space: nowrap;
 
-
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Section 1 - HELLO */
+/* HELLO */
 .section-1::before {
     content: "hello";
-    top: 20px;
-    left: -80px;
+    position: absolute;
+    z-index: 0;
+
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(150px, 25vw, 350px);
+    font-weight: 700;
+    line-height: 1;
     color: var(--Lichtgrijs);
-    transform: translateX(60%);
+
+    pointer-events: none;
+    white-space: nowrap;
 }
 
-/* Section 2 - WORK */
+/* WORK */
 .section-2::before {
     content: "work";
-    top: -50px;
+    position: absolute;
+    z-index: 0;
+
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(150px, 25vw, 350px);
+    font-weight: 700;
+    line-height: 1;
     color: white;
-    transform: translateX(10%);
-    font-size:24rem;
+
+    pointer-events: none;
+    white-space: nowrap;
 }
 
 /* Section 5 - SERVICES */
 .section-5::before {
     content: "services";
     top: 10px;
-    left: -33%;
     color: var(--Lichtgrijs);
-    transform: translateX(50%);
 }
 
-/* Actual content above the background words */
+/* Actuele content boven de background woorden */
 .section-1 > *,
 .section-2 > *,
 .section-5 > * {
     position: relative;
     z-index: 1;
 }
-/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+/* ------------------------------- Responsive -------------------------------- */
 
 @media (max-width: 768px) {
-    .section-5-container {
-        grid-template-columns: repeat(2, 1fr);
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        flex-direction: column;
     }
-}
 
-
-@media (max-width: 500px) {
-    .section-5-container {
-        grid-template-columns: 1fr;
+    .section-2-text,
+    .section-2-image,
+    .section-3-text,
+    .section-3-image,
+    .section-4-text,
+    .section-4-image {
+        width: 100%;
+        max-width: none;
     }
 
     .section-5-card {
+        flex: 1 1 calc(50% - 18px);
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-1-text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .section-5-card {
+        flex: 1 1 100%;
         aspect-ratio: auto;
         min-height: 300px;
     }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding: 50px 20px;
+    }
+
+    .section-1-text {
+        width: 95%;
+    }
+
+    .section-2-text p,
+    .section-3-text p,
+    .section-4-text p {
+        font-size: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 504px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+.section-1::before,
+.section-2::before,
+.section-5::before {
+    font-size: clamp(80px, 15vw, 180px);
 }
